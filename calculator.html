@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+    	function init() {
+    		document.getElementById('btn').onclick = myFunction;
+    	}
+
+    	function myFunction() {
+
+    		var joanCost = document.getElementById('joanCost').value;
+    		var quantity = document.getElementById('quantity').value;
+    		var soldPrice = document.getElementById('soldPrice').value;
+        var totalInvestment = joanCost * quantity
+        var gross = quantity * soldPrice
+        var profit = gross - totalInvestment
+        var tip = profit * .1
+        var profitAfterTip = profit - tip
+
+
+/*
+        var string = "Total Investment: " + x * y + "<br>";
+    		string += "Gross: " + z * y + "<br>";
+    		string += "10% Tip: " +  0.1 * (z * y) + "<br>";
+
+        var string = "";
+        string += "<table><tr><th>Total Cost</th>";
+        string += "<th>Gross Profit</th>";
+        string += "<th>Tips</th></tr>";
+        string += "<tr><th>xy</th>";
+        string += "<th>zy</th>";
+        string += "<th>0.1zy</th></tr></table>";
+*/
+        var string = "";
+        string += "Total Investment:" + "<br>" + totalInvestment + "<br><br>"
+        string += "Gross:" + "<br>" + gross + "<br><br>"
+        string += "Profit minus investment:" + "<br>" + profit + "<br><br>"
+        string += "10% tip on your profit:" + "<br>" + tip + "<br><br>"
+        string += "Actual proft after investment and tip:" + "<br>" + profitAfterTip + "<br><br>"
+
+    		displayText(string);
+    	}
+
+    	function displayText(str) {
+    		console.log ("Displaying: " + str);
+    		document.getElementById("result").innerHTML = str;
+    	}
+
+    	window.onload = init;
+
+    </script>
+  </head>
+
+  <body>
+  	<h1>
+  		Animal Crossing Turnip Calculator
+  	</h1>
+
+    <table>
+      <tr>
+        <td>
+          How much was Joan selling her turnips for? (90 - 110)
+        </td>
+        <td>
+          <input id="joanCost" type="text">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          How many turnips did you buy? (18,000 is a full locker)
+        </td>
+        <td>
+          <input id="quantity" type="text">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          What did you sell them for?
+        </td>
+        <td>
+          <input id="soldPrice" type="text">
+        </td>
+      </tr>
+    </table>
+
+    <br>
+	  <button type="button" id="btn">Shall I push the button?</button>
+    <br>
+
+	<p id="result"></p>
+
+</body>
+</html>
