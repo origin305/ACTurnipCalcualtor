@@ -3,7 +3,9 @@
 Looking for an easy way to find out how many bells you made (or lost) in the Animal Crossing Stalk Market? Look no further! Just punch in:
 
 How much you bought the turnips from Joan for (each),
+
 How many you bought,
+
 How much you sold them for,
 
 and this will do the rest.
@@ -14,10 +16,10 @@ The easiest way at the moment is to right click on "calculator.html" and click S
 
 ## Contributors
 
-@aec1130 wrote the original code, I just prettied it up and added a few more calculations to it.
+https://github.com/aec1140 wrote the original code, I just prettied it up and added a few more calculations to it.
 
 ## The basic code flow
-
+```
 User input
 x = cost of turnips each ( range 90 - 110 )
 y = how many you bought
@@ -32,7 +34,7 @@ Calculations
 a = x * y
 b = z * y
 c = 10% of b
-
+```
 _This has since been changed in the actual program so it no longer gets a 10% tip from your gross._
 
 ## License
